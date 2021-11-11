@@ -8,12 +8,16 @@ var textarea = document.querySelector('textarea')
 // Then apply them to elements on the page
 // YOUR CODE HERE
 
+
 formEl.onsubmit = function(e) {
   // prevents form submission
   e.preventDefault()
   // save name element's content to cookies
   // save textarea's content to localstorage
   // YOUR CODE HERE
+  var text = textarea.value
+  console.log({text})
+  localStorage.setItem('notes',text)
 
   // triggers thumbs up animation
   this.elements.save.classList.add('emoji')
